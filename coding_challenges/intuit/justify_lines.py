@@ -1,9 +1,6 @@
 import sys
 import math
 
-# Prints to standard output.
-
-
 def reflowLines(line_length, lines):
   words = []
   result = []
