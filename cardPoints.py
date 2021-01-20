@@ -24,3 +24,21 @@ class Solution:
             r += 1
 
         return totalSum - minSum
+
+    def maxScore(self, cardPoints: List[int], k: int) -> int:
+        totalSum = sum(cardPoints)
+
+        if k == len(cardPoints):
+            return totalSum
+
+        windowLength = len(cardPoints)-k  # 4
+        tempSum = sum(cardPoints[0:windowLength])  # 22
+        minSum = tempSum  # 10
+
+        for i in range(1, len(cardPoints)-windowLength+1):
+            tempSum -= cardPoints[i-1]
+            tempSum += cardPoints[i+windowLength-1]
+            minSum = min(minSum, tempSum)
+
+        # print(minSum)
+        return totalSum - minSum
