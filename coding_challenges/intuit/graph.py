@@ -1,7 +1,5 @@
 #Given a 2D array, find origin and final destination
 
-# airports = ['A', 'B', 'C', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M']
-
 # flights = [
 #     ["A", "B"],
 #     ["A", "C"],
@@ -21,23 +19,6 @@
 # J: M
 
 
-# class Node:
-#     def __init__(self, name):
-#         self.name = name
-#         self.children = []
-
-#     def addChild(self, childName):
-#         self.children.append(childName)
-#         return self
-
-#     def dfs(self, destinations=[]):
-#         for child in self.children:
-#             if not child.children:
-#                 destinations.append(child)
-#                 return
-#             child.dfs(destinations)
-
-#         return destinations
 
 
 def findDestinations(flights):
@@ -108,3 +89,22 @@ print(findDestinations(flights))
 
 #     print(adjList)
 #     return dfs(adjList, origin, [])
+
+
+# class Node:
+#     def __init__(self, name):
+#         self.name = name
+#         self.children = []
+
+#     def addChild(self, childName):
+#         self.children.append(childName)
+#         return self
+
+#     def dfs(self, destinations=[]):
+#         for child in self.children:
+#             if not child.children:
+#                 destinations.append(child)
+#                 return
+#             child.dfs(destinations)
+
+#         return destinations
