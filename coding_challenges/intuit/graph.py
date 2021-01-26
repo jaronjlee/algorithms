@@ -19,7 +19,27 @@
 # J: M
 
 
+#directed graph where nodes have direction
+#create adjacency list where key is the departing flight and value is an array of all destinations
+#find origin airports
+#traverse graph for every origin airport using DFS
+#origin airports are airports that do not show up on the right side of the 2D array
+#two sets, potential origin airports, destination airports. subtract two sets to come up with origin airports
 
+# adj = {
+#     "A": ["B", "C"],
+#     "B": ["K"],
+#     "C": ["K"],
+#     "E": ["L", "F"],
+#     "F": ["G"],
+#     "G": ["H", "I"],
+#     "H": [],
+#     "I": [],
+#     "J": ["M"],
+#     "K": [],
+#     "L": [],
+#     "M": []
+# }
 
 def findDestinations(flights):
     adjList = {}
@@ -57,7 +77,24 @@ def dfs(adjList, origin, destinations):
 
     return destinations
 
-airports = ['A', 'B', 'C', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M']
+
+def bfs(origin, adjList, destinations):
+  result = []
+  queue = adjList[origin]
+  while queue:
+    flight = queue.pop(0)
+    if adjList[flight] != []:
+      queue += adjList[flight]
+    else:
+      if flight not in result:
+        result.append(flight)
+
+  return result
+
+
+
+
+
 
 flights = [
     ["A", "B"],
