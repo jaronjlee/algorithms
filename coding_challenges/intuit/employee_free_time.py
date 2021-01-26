@@ -1,14 +1,10 @@
+class Interval:
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
+
 class Solution:
-
     def employeeFreeTime(self, schedule: '[[Interval]]') -> '[Interval]':
-        def merge(interval1, interval2):
-            if interval2.start <= interval1.end and interval2.end > interval1.start:
-                start = min(interval2.start, interval1.start)
-                end = max(interval2.end, interval1.end)
-                consolidatedTime = Interval(start, end)
-                return consolidatedTime
-            return False
-
         allIntervals = []
         for employee in schedule:
             for interval in employee:
