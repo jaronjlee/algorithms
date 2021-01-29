@@ -24,3 +24,6 @@ function minMoves(n , startRow, startCol, endRow, endCol) {
 	}
 	Return-1
 	}	
+
+
+def minMoves
