@@ -19,3 +19,6 @@ class Solution:
         else:
             mid = int(len(result) / 2)
             return (result[mid])
+
+
+#https://medium.com/@hazemu/finding-the-median-of-2-sorted-arrays-in-logarithmic-time-1d3f2ecbeb46
