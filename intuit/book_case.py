@@ -79,8 +79,7 @@ class BookCase:
 
 
 # bookcase_dimensions = [ 3, 4] #3 Rows with each row having space for 4 books of dimension/size 1
-book_titles = ["AA", "AB", "C", "CD", "E",
-               "FF", "Q", "T", "TT", "V", "VY", "ZZZ"]
+book_titles = ["AA", "AB", "C", "CD", "E", "FF", "Q", "T", "TT", "V", "VY", "ZZZ"]
 
 # ["AA", "AB", "C", "CD",
 # "E", "FF", "Q", "T",
@@ -88,3 +87,17 @@ book_titles = ["AA", "AB", "C", "CD", "E",
 
 bookCase = BookCase(3, 4, book_titles)
 print(bookCase.getNext("ZZZ"))
+
+
+
+# self.bookcase = [
+#     [None, None, None, None],
+#     [None, None, None, None],
+#     [None, None, None, None]
+# ]
+
+# self.bookcase = [
+#     ["AA", "AB", None, None],
+#     [None, None, None, None],
+#     [None, None, None, None]
+# ]
